@@ -1,0 +1,16 @@
+.aula1a3 {
+    /*border:solid 2px red; concatena os seguintes comandos*/
+    border-color: rgb(255, 251, 0);
+    border-style: solid;
+    border-bottom: 2px;
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 2px;
+    /*Declaração de fonte, se não acha a primeira procura as demais*/
+    font-family:'Courier New', Courier, monospace;
+    /*Aceita cor em rgb(255,255,255) ou Hexa #ffffff*/
+    background-color: #09ffff;
+    /*margin aceita em px ou % (em relação ao pai)*/
+    margin:10px;
+    color: rgba(36, 23, 146, 0.5);/*a - transparência de 0 a 1*/
+}

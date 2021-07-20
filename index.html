@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="./my-css.css" rel="stylesheet" />
+    <style> /*Ordem de atendimento de estilo id>classe>elemento */
+       
+        #parent-container{/*forma de estilizar componente pelo id*/
+            display:flex;/*alinha as div - flexbox*/
+            flex-wrap: wrap;/*quebra a linha no alinhamento das divs*/
+            height: 200px;
+            width: 300px;
+            border:1px solid black;
+            background-color: cadetblue;
+            
+        }
+
+        .my-div{
+            background-color: darkgreen;
+            padding: 2px 2px;/*Entre o elemento e a borda*/
+            margin: 4px 4px;/*depois da borda*/
+            border:2px dashed red;
+            color:#0000ff; /*fonte*/
+            font-weight: 500;/*grossura do traço*/
+            font-size:20px;/*tamanho de fonte*/
+
+            /*flex-basis define a largura inicial que um componente deve ter
+            para aumentar dois componentes, diminuir, para que ocupem todo 
+            espaço do "pai" usar flex-grow ou flex-shrink Aula 8 CSS*/
+        }
+
+        @media(max-width:600px) and (min-width: 50px){ /*define comportamento diferente para tamanhos diferente de tela*/
+            .my-div{
+                background-color: red;
+            }
+        }
+
+        .my-div:hover{/*Acionado quando passa o mouse em cima- pseudo classe*/
+            background-color: rgb(100, 0, 22);
+            padding: 2px 2px;/*Entre o elemento e a borda*/
+            margin: 4px 4px;/*depois da borda*/
+            border:2px dashed red;
+            color:#0000ff; /*fonte*/
+            font-weight: 500;/*grossura do traço*/
+            font-size:20px;/*tamanho de fonte*/
+
+            /*flex-basis define a largura inicial que um componente deve ter
+            para aumentar dois componentes, diminuir, para que ocupem todo 
+            espaço do "pai" usar flex-grow ou flex-shrink Aula 8 CSS*/
+        }
+        
+        .my-div::first-letter{/*pseudo Elemento - Primeira letra*/
+            font-size: 30px;
+        }
+
+        div[meuatributo]{/*forma de indexar  por atributo criado*/
+            background-color: rgb(21, 46, 21);
+            padding: 3px 3px;/*Entre o elemento e a borda*/
+            margin: 7px 7px;/*depois da borda*/
+            border:2px dashed rgb(95, 63, 63);
+            color:#22887a; /*fonte*/
+            font-weight: 800;/*grossura do traço*/
+            font-size:10px;/*tamanho de fonte*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="aula1a3">
+        Olá Mundo!!
+    </div>
+    <div id="parent-container">
+        <div class="my-div">
+            Olá Mundo!!
+        </div>
+        <div class="my-div">
+            Olá Mundo!!
+        </div>
+        <div meuatributo>
+            Olá Mundo!!
+        </div>
+    </div>
+    
+</body>
+</html>
